@@ -7,6 +7,7 @@ import Home from './views/Home/Home'
 import ProductDetail from './views/ProductDetail/ProductDetail'
 import ShoppingCart from './views/ShoppingCart/ShoppingCart'
 import CheckOut from './views/CheckOut/CheckOut'
+import { PRODUCTS_MOCK } from './mock/productMock'
 
 
 const router = createBrowserRouter([
@@ -16,18 +17,18 @@ const router = createBrowserRouter([
   },
   {
     path: "/home",
-    element: <Home />,
+    element: <Home data={ PRODUCTS_MOCK }/>,
   },
   {
-    path: "/productdetail",
-    element: <ProductDetail />,
+    path: "/productdetail/:productId",
+    element: <ProductDetail data={ PRODUCTS_MOCK } />,
   },
   {
-    path: "/shoppingcart",
-    element: <ShoppingCart />,
+    path: "/shoppingcart/:id",
+    element: <ShoppingCart data={ PRODUCTS_MOCK } />,
   },
   {
-    path: "/checkout",
+    path: "/checkout/:id",
     element: <CheckOut />,
   }
 ]);
