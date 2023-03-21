@@ -1,12 +1,14 @@
 import "./login.scss"
 import React from 'react'
 import { Link } from "react-router-dom"
-import Header from '../../components/Header/Header'
+import logoDnc from "../../assets/dnc-logo.svg"
 
 const Login = () => {
     return (
         <section className="login">
-            <Header />
+            <section className="login__header">
+                <img src={logoDnc} alt="logo da escola dnc" />
+            </section>
             <section className="login__form">
                 <h1>Acesse com seu login ou cadastre-se!</h1>
                 <h2>você pode entrar com o seu CPF</h2>
