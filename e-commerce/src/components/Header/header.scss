@@ -1,0 +1,12 @@
+@use "../../sass/variables" as *;
+
+.header {
+    width: 100%;
+    background-color: $black;
+
+    img {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+    }
+}
