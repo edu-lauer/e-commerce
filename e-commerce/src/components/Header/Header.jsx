@@ -1,12 +1,30 @@
 import "./header.scss"
-import logoDnc from "../../assets/dnc-logo.svg"
-
 import React from 'react'
+import logoDnc from '../../assets/dnc-logo.svg'
+import searchLogo from '../../assets/search.png'
+import shoppCart from '../../assets/shopping-cart.svg'
 
 const Header = () => {
     return (
         <section className="header">
-            <img src={logoDnc} alt="logo da escola dnc" />
+            <div className="header__superior">
+                <img src={logoDnc} alt="logo da escola dnc" />
+                <div className="header__input-container">
+                    <img src={searchLogo} alt="lupa de busca" className='header__search-logo' />
+                    <input type="text" placeholder='Search' />
+                </div>
+                <img src={shoppCart} alt="carrinho de compras" />
+            </div>
+            <div className="header__navbar">
+                <nav>
+                    <a href="">Novidades</a>
+                    <a href="">Jogos</a>
+                    <a href="">Video Games</a>
+                    <a href="">Mesas Gamer</a>
+                    <a href="">Promoções</a>
+                    <a href="">Atendimento</a>
+                </nav>
+            </div>
         </section>
     )
 }
