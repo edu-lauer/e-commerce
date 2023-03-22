@@ -3,13 +3,15 @@
 .card {
 
     width: 340px;
-    height: 380px;
+    height: 360px;
     border: solid 1px $border-background-card;
     border-radius: 8px;
     background-color: $white;
 
     div {
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     img {
@@ -17,9 +19,27 @@
         height: 255px;
         display: flex;
     }
-    
-    p, button {
+
+    p {
         padding: 16px;
         text-align: center;
+    }
+
+    button {
+        padding: auto;
+        text-align: center;
+        margin: auto;
+
+        width: 10rem;
+        height: 2rem;
+
+        background: $contrast-color;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        color: $white;
     }
 }
