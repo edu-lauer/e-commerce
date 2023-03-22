@@ -1,0 +1,22 @@
+@use "../../sass/variables" as *;
+
+.footer {
+    display: flex;
+    align-items: center;
+
+    background-color: $contrast-color;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: $white;
+
+    p {
+        width: 57%;
+    }
+
+    img {
+        margin: 0rem 5rem 1.5rem 1.5rem;
+    }
+}

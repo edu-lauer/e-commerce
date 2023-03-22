@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import Header from '../../components/Header/Header'
 import Card from '../../components/Card/Card'
+import Footer from '../../components/Footer/Footer'
 import mainImg from '../../assets/main-image.svg'
 
 const Home = ({ data }) => {
@@ -17,6 +18,7 @@ const Home = ({ data }) => {
                     ))
                 }
             </div>
+            <Footer />
         </section>
     )
 }
