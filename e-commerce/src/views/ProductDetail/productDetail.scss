@@ -1,0 +1,92 @@
+@use "../../sass/variables" as *;
+
+.product-detail {
+
+    &__container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    // css do container do lado esquerdo
+    &__container-left-side {
+        img {
+            padding: 1rem;
+        }
+
+        h2 {
+            padding: 1rem;
+            width: 65%;
+            margin: auto;
+            text-align: left;
+        }
+    }
+
+    &__container-left-side-title {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+    }
+
+    &__container-left-side-decription {
+        border-bottom: 2px solid $contrast-color;
+        width: 65%;
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+
+    // css do container do lado direito
+    &__container-right-side {
+
+        p {
+            margin-top: 1rem;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            text-align: center;
+            margin: auto;
+
+            width: 25rem;
+            height: 3rem;
+
+            background: $contrast-color;
+            border: 1px solid $black;
+            border-radius: 10px;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 8rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+
+        img {
+            margin-right: 1rem;
+        }
+
+    }
+
+    &__container-right-side-title {
+        padding: 1rem;
+        border-bottom: 2px solid $contrast-color;
+        width: 75%;
+        margin: auto;
+        margin-bottom: 5rem;
+    }
+
+    &__container-right-side-price {
+        padding: 1rem 0;
+        text-align: left;
+    }
+
+
+}
