@@ -48,7 +48,9 @@
 
         button {
             text-align: center;
-            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             width: 25rem;
             height: 3rem;
@@ -61,7 +63,7 @@
             font-weight: 700;
             font-size: 14px;
             line-height: 20px;
-            margin-top: 8rem;
+            margin-top: 6rem;
         }
 
         a {
@@ -79,13 +81,22 @@
         padding: 1rem;
         border-bottom: 2px solid $contrast-color;
         width: 75%;
-        margin: auto;
+        text-align: left;
         margin-bottom: 5rem;
     }
 
     &__container-right-side-price {
         padding: 1rem 0;
         text-align: left;
+    }
+
+    &__cube-colors {
+        display: flex;
+
+        div {
+            margin-right: 1rem;
+            border: 1px solid gray;
+        }
     }
 
 
