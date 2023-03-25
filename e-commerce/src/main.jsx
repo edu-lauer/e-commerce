@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element: <ProductDetail data={ PRODUCTS_MOCK } />,
   },
   {
-    path: "/shoppingcart/:id",
+    path: "/shoppingcart/:shoppingCartId",
     element: <ShoppingCart data={ PRODUCTS_MOCK } />,
   },
   {
