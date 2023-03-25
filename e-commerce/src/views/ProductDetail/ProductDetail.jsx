@@ -7,7 +7,6 @@ import Footer from '../../components/Footer/Footer'
 import carrinhoCompras from "../../assets/shopping_cart.png"
 
 const ProductDetail = ({ data }) => {
-
     const { productId } = useParams()
     const selectedProduct = data.find((product) => product.id == productId)
 
@@ -24,7 +23,7 @@ const ProductDetail = ({ data }) => {
                 <div className="product-detail__container-right-side">
                     <h1 className="product-detail__container-right-side-title">{selectedProduct.title}</h1>
                     <h2 className="product-detail__container-right-side-price">{selectedProduct.price}</h2>
-                    <p>
+                    <p hidden={selectedProduct.colors.length === 0}>
                         Cor:{" "}
                         {selectedProduct.colors.length === 1
                             ? selectedProduct.colors.map((color, index) => (
@@ -52,10 +51,9 @@ const ProductDetail = ({ data }) => {
                     </div>
                     <button>
                         <img src={carrinhoCompras}></img>
-                        <Link to={`/shoppingCart/${selectedProduct.id}`}>Adicionar ao carrinho</Link>
+                        <Link to={`/shoppingcart/${selectedProduct.id}`}>Adicionar ao carrinho</Link>
                     </button>
                 </div>
-
             </div>
             <Footer />
         </div>
