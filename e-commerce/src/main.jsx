@@ -28,8 +28,8 @@ const router = createBrowserRouter([
     element: <ShoppingCart data={ PRODUCTS_MOCK } />,
   },
   {
-    path: "/checkout/:id",
-    element: <CheckOut />,
+    path: "/checkout/:checkOutId",
+    element: <CheckOut data={ PRODUCTS_MOCK }/>,
   }
 ]);
 

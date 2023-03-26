@@ -81,7 +81,7 @@ const ShoppingCart = ({ data }) => {
                             <Link to={`/home`}>Continuar comprando</Link>
                         </button>
                         <button style={customStyles.finalizarCompraBtn}>
-                            <Link to={`//checkout/${selectedProduct.id}`}>Finalizar compra</Link>
+                            <Link to={`/checkout/${selectedProduct.id}`}>Finalizar compra</Link>
                         </button>
                     </div>
                 </div>
