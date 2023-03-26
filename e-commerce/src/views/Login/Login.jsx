@@ -16,15 +16,26 @@ const Login = () => {
     const validade = () => {
         if (cpf == '') {
             setMsgCpf('Campo obrigatório')
-        } else if (cpf.length != 11) {
+        }
+        if (cpf.length != 11) {
             setMsgCpf('CPF deve conter 11 digitos')
-        } else if (isNaN(+cpf)) {
+        }
+        if (isNaN(+cpf)) {
             setMsgCpf('Campo CPF deve ser numérico')
-        } else if (password == '') {
+        }
+        if (cpf != '' && cpf.length == 11 && !isNaN(+cpf)) {
+            setMsgCpf('')
+        }
+        if (password == '') {
             setMsgPassword('Campo obrigatório')
-        } else if (password.length < 6) {
+        }
+        if (password.length < 6) {
             setMsgPassword('Senha Inválida')
-        } else {
+        }
+        if (password != '' && password.length >= 6) {
+            setMsgPassword('')
+        }
+        if (cpf != '' && cpf.length == 11 && !isNaN(+cpf) && password != '' && password.length >= 6){
             navigate("/home")
         }
     }
