@@ -1,9 +1,35 @@
 import "./login.scss"
-import React from 'react'
-import { Link } from "react-router-dom"
+import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom"
 import logoDnc from "../../assets/dnc-logo.svg"
 
+
 const Login = () => {
+
+    const [cpf, setCpf] = useState('')
+    const [password, setPassword] = useState('')
+    const [msgCpf, setMsgCpf] = useState('')
+    const [msgPassword, setMsgPassword] = useState('')
+
+    const navigate = useNavigate()
+
+    const validade = () => {
+        if (cpf == '') {
+            setMsgCpf('Campo obrigatório')
+        } else if (cpf.length != 11) {
+            setMsgCpf('CPF deve conter 11 digitos')
+        } else if (isNaN(+cpf)) {
+            setMsgCpf('Campo CPF deve ser numérico')
+        } else if (password == '') {
+            setMsgPassword('Campo obrigatório')
+        } else if (password.length < 6) {
+            setMsgPassword('Senha Inválida')
+        } else {
+            navigate("/home")
+        }
+    }
+
+
     return (
         <section className="login">
             <section className="login__header">
@@ -14,14 +40,27 @@ const Login = () => {
                 <h2>você pode entrar com o seu CPF</h2>
                 <div className="login__input-form">
                     <label htmlFor="cpf">Digite seu CPF:</label>
-                    <input type="text" placeholder="cpf completo" id="cpf" className="login__input-cpf"></input>
+                    <input
+                        type="text"
+                        placeholder="cpf completo"
+                        id="cpf"
+                        className="login__input-cpf"
+                        value={cpf}
+                        onChange={(e) => setCpf(e.target.value.trim())}>
+                    </input>
+                    <span>{msgCpf}</span>
                     <label htmlFor="password">Senha:</label>
-                    <input type="password" placeholder="********" id="password" className="login__input-password"></input>
+                    <input
+                        type="password"
+                        placeholder="********"
+                        id="password"
+                        className="login__input-password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value.trim())}>
+                    </input>
+                    <span>{msgPassword}</span>
                 </div>
-                <button type='submit'>
-                    <Link to={"/home"}>Entrar</Link>
-                </button>
-
+                <button type='submit' onClick={validade}>Entrar</button>
             </section>
         </section>
     )
