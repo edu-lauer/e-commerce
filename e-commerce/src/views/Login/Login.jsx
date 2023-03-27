@@ -35,7 +35,7 @@ const Login = () => {
         if (password != '' && password.length >= 6) {
             setMsgPassword('')
         }
-        if (cpf != '' && cpf.length == 11 && !isNaN(+cpf) && password != '' && password.length >= 6){
+        if (cpf != '' && cpf.length == 11 && !isNaN(+cpf) && password != '' && password.length >= 6) {
             navigate("/home")
         }
     }
@@ -46,20 +46,21 @@ const Login = () => {
             <section className="login__header">
                 <img src={logoDnc} alt="logo da escola dnc" />
             </section>
-            <section className="login__form">
+            <section className="login__form-container">
                 <h1>Acesse com seu login ou cadastre-se!</h1>
                 <h2>você pode entrar com o seu CPF</h2>
-                <div className="login__input-form">
+                <div className="login__form">
                     <label htmlFor="cpf">Digite seu CPF:</label>
                     <input
                         type="text"
-                        placeholder="cpf completo"
+                        placeholder="XXX.XXX.XXX-XX"
                         id="cpf"
                         className="login__input-cpf"
                         value={cpf}
                         onChange={(e) => setCpf(e.target.value.trim())}>
                     </input>
                     <span>{msgCpf}</span>
+
                     <label htmlFor="password">Senha:</label>
                     <input
                         type="password"
