@@ -8,12 +8,12 @@ const Header = () => {
     return (
         <section className="header">
             <div className="header__superior">
-                <img src={logoDnc} alt="logo da escola dnc" />
+                <img src={logoDnc} alt="logo da escola dnc" className="header__superior-logo" />
                 <div className="header__input-container">
                     <img src={searchLogo} alt="lupa de busca" className='header__search-logo' />
                     <input type="text" placeholder='Search' />
                 </div>
-                <img src={shoppCart} alt="carrinho de compras" />
+                <img src={shoppCart} alt="carrinho de compras" className="header__carrinho-logo" />
             </div>
             <div className="header__navbar">
                 <nav>
