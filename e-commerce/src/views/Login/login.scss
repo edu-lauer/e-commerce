@@ -9,7 +9,7 @@
     &__header {
         width: 100%;
         background-color: $black;
-    
+
         img {
             margin-top: 1rem;
             margin-bottom: 1rem;
@@ -17,48 +17,51 @@
         }
     }
 
-    &__form {
+    &__form-container {
         margin-top: 5rem;
         text-align: center;
+
+        h1 {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 35px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 26px;
+        }
     }
 
-    h1 {
-        font-size: 30px;
-        font-weight: 500;
-        line-height: 35px;
-    }
 
-    h2 {
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 26px;
-    }
-
-    label {
-        text-align: left;
-        font-size: 20px;
-        line-height: 23px;
-    }
-
-    &__input-form {
-        max-width: 524px;
+    &__form {
         display: flex;
         flex-direction: column;
         row-gap: 12px;
         margin-top: 84px;
+
+        label {
+            text-align: left;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 23px;
+            color: #000000;
+        }
+
+        input {
+            height: 52px;
+            padding: 18px 13px;
+            border: 2px solid $border-input-color;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        span {
+            text-align: left;
+        }
     }
 
-    &__input-name {
-        margin-bottom: 19px;
-    }
-
-    input {
-        height: 52px;
-        padding: 18px 13px;
-        border: 2px solid $border-input-color;
-        border-radius: 10px;
-        width: 100%;
-    }
 
     button {
         width: 524px;
@@ -75,7 +78,87 @@
         color: $white;
     }
 
-    span {
-        text-align: left;
+
+    // responsividade
+    @media screen and (max-width: 768px) {
+        &__header {
+            img {
+                width: 15%;
+                height: auto;
+            }
+        }
+
+        &__form-container {
+            h1 {
+                font-size: 25px;
+                font-weight: 500;
+                line-height: 30px;
+            }
+
+            h2 {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 24px;
+            }
+        }
+
+        &__form {
+            width: 80%;
+            margin: 5rem auto;
+            input {
+                height: 40px;
+                width: 100%;
+            }
+
+            label {
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            span {
+                text-align: left;
+                font-size: 12px;
+            }
+        }
+
+        button {
+            width: 80%;
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 15px;
+            margin-top: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 430px) {
+        &__form-container {
+            h1 {
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 25px;
+            }
+
+            h2 {
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 20px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 325px) {
+        &__form-container {
+            h1 {
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 20px;
+            }
+
+            h2 {
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 15px;
+            }
+        }
     }
 }
