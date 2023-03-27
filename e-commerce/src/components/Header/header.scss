@@ -12,8 +12,21 @@
         align-items: center;
     }
 
+    &__superior-logo {
+        width: 9%;
+        height: auto;
+    }
+
     &__input-container {
         position: relative;
+
+        input {
+            padding-left: 45px;
+            height: 48px;
+            width: 1096px;
+            border-radius: 10px;
+            border: 1px solid $border-input-color;
+        }
     }
 
     &__search-logo {
@@ -23,14 +36,6 @@
         transform: translateY(-50%);
         font-size: 18px;
         color: gray;
-    }
-
-    input {
-        padding-left: 45px;
-        height: 48px;
-        width: 1096px;
-        border-radius: 10px;
-        border: 1px solid $border-input-color;
     }
 
     &__navbar {
@@ -53,6 +58,47 @@
         a:hover {
             cursor: pointer;
             text-decoration: underline;
+        }
+    }
+
+    //Responsividade
+}
+
+@media screen and (max-width: 1400px) {
+    .header {
+        padding: 0.5rem;
+
+        &__search-logo {
+            width: 3%;
+            height: auto;
+        }
+
+        &__superior-logo {
+            width: 8%;
+            height: auto;
+        }
+
+        &__carrinho-logo {
+            width: 8%;
+            height: auto;
+        }
+
+        &__input-container {
+            input {
+                width: 38rem;
+                height: 2rem;
+            }
+        }
+
+        &__navbar {
+            padding: 0.5rem;
+
+            a {
+                font-style: normal;
+                font-weight: 900;
+                font-size: 15px;
+                line-height: 20px;
+            }
         }
     }
 
