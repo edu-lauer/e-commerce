@@ -20,3 +20,50 @@
         margin: 0rem 5rem 1.5rem 1.5rem;
     }
 }
+
+@media screen and (max-width: 900px) {
+    .footer {
+        font-size: 15px;
+        line-height: 18px;
+    
+        p {
+            width: 70%;
+        }
+    
+        img {
+            margin: 0.5rem 1.5rem 1.5rem 1.5rem;
+            width: 10%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .footer {
+        font-size: 10px;
+        line-height: 13px;
+    
+        img {
+            margin: 1rem 1.5rem 1.5rem 1.5rem;
+            width: 10%;
+            height: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .footer {
+        font-size: 8px;
+        line-height: 11px;
+    
+        p {
+            width: 70%;
+        }
+    
+        img {
+            margin: 1rem 1.5rem 1.5rem 1.5rem;
+            width: 10%;
+            height: auto;
+        }
+    }
+}
