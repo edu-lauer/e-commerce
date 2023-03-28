@@ -41,8 +41,6 @@ const ProductDetail = ({ data }) => {
                         {selectedProduct.colors.map((color) => (
                             <div
                                 style={{
-                                    width: "64px",
-                                    height: "60px",
                                     borderRadius: "10px",
                                     backgroundColor: color,
                                 }}
