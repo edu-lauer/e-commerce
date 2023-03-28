@@ -96,8 +96,101 @@
         div {
             margin-right: 1rem;
             border: 1px solid gray;
+            width: 64px;
+            height: 60px;
+
         }
     }
+}
 
 
+// Responsividade
+
+@media screen and (max-width: 900px) {
+    .product-detail {
+
+        // css do container do lado esquerdo
+        &__container-left-side {
+            h2 {
+                padding: 1rem;
+                width: 70%;
+                font-size: 1.2rem;
+            }
+        }
+
+        &__container-left-side-decription {
+            width: 65%;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        // css do container do lado direito
+        &__container-right-side {
+
+            p {
+                margin-top: 1rem;
+                text-align: left;
+                margin: auto;
+            }
+
+            button {
+                margin: auto 6rem auto 2rem;
+                width: 20rem;
+                height: 2.5rem;
+
+                font-size: 12px;
+            }
+
+        }
+
+        &__container-right-side-title {
+            width: 85%;
+            font-size: 1.3rem;
+        }
+
+        &__container-right-side-price {
+            font-size: 1.2rem;
+        }
+
+        &__cube-colors {
+    
+            div {
+                width: 52px;
+                height: 47px;
+                margin-bottom: 6rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .product-detail {
+        // css do container do lado direito
+        &__container-right-side {
+            button {
+                margin: auto 6rem auto 2rem;
+                width: 18rem;
+                height: 2.2rem;
+
+                font-size: 12px;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .product-detail {
+        // css do container do lado direito
+        &__container-right-side {
+            button {
+                margin: auto 6rem auto 2rem;
+                width: 15rem;
+                height: 2rem;
+
+                font-size: 12px;
+            }
+
+        }
+    }
 }
