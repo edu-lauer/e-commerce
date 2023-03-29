@@ -78,6 +78,12 @@
         color: $white;
     }
 
+    button:hover {
+        cursor: pointer;
+        background-color: #1c07bd;
+        transition: 0.5s;
+    }
+
 
     // responsividade
     @media screen and (max-width: 768px) {

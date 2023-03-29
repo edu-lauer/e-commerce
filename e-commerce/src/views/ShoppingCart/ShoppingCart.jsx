@@ -1,7 +1,7 @@
 import './shoppingCart.scss'
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 
@@ -10,6 +10,14 @@ const ShoppingCart = ({ data }) => {
     const { shoppingCartId } = useParams()
     const selectedProduct = data.find((product) => product.id == shoppingCartId)
 
+    const navigate = useNavigate()
+    const goToHome = () => {
+        navigate(`/home`)
+    }
+
+    const goTo = () => {
+        navigate(`/checkout/${selectedProduct.id}`)
+    }
 
     const customStyles = {
         content: {
@@ -35,6 +43,7 @@ const ShoppingCart = ({ data }) => {
         },
         continuarCompraBtn: {
             marginTop: "2rem",
+            color: "white"
         }
     };
 
@@ -66,8 +75,8 @@ const ShoppingCart = ({ data }) => {
                                 )}
                         </p>
                         <div className="product-detail__cube-colors">
-                            {selectedProduct.colors.map((color) => (
-                                <div
+                            {selectedProduct.colors.map((color, index) => (
+                                <div key={index}
                                     style={{
                                         borderRadius: "10px",
                                         backgroundColor: color,
@@ -75,12 +84,8 @@ const ShoppingCart = ({ data }) => {
                                 ></div>
                             ))}
                         </div>
-                        <button style={customStyles.continuarCompraBtn}>
-                            <Link to={`/home`}>Continuar comprando</Link>
-                        </button>
-                        <button style={customStyles.finalizarCompraBtn}>
-                            <Link to={`/checkout/${selectedProduct.id}`}>Finalizar compra</Link>
-                        </button>
+                        <button onClick={goToHome} style={customStyles.continuarCompraBtn}>Continuar comprando</button>
+                        <button onClick={goTo} style={customStyles.finalizarCompraBtn}>Finalizar compra</button>
                     </div>
                 </div>
             </div>

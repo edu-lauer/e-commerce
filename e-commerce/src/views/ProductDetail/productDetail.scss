@@ -64,12 +64,14 @@
             font-size: 14px;
             line-height: 20px;
             margin-top: 6rem;
-        }
-
-        a {
-            text-decoration: none;
             color: $white;
         }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #1c07bd;
+            transition: 0.5s;
+        }   
 
         img {
             margin-right: 1rem;

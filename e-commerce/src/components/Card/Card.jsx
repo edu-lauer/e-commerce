@@ -1,16 +1,21 @@
 import "./card.scss"
 import React from 'react'
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const Card = ({ data }) => {
+
+    const navigate = useNavigate()
+
+    const goTo = () => {
+        navigate(`/productDetail/${data.id}`)
+    }
+
     return (
         <section className="card">
             <div>
                 <img src={data.imgPath} alt={data.title} />
                 <p>{data.title}</p>
-                <button>
-                    <Link to={`/productDetail/${data.id}`}>Ver mais</Link>
-                </button>
+                <button onClick={goTo}>Ver mais</button>
             </div>
         </section>
     )

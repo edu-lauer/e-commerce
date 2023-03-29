@@ -2,13 +2,20 @@ import "./checkOut.scss"
 import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useParams } from 'react-router-dom'
 
 const CheckOut = ({ data }) => {
 
     const { checkOutId } = useParams()
     const selectedProduct = data.find((product) => product.id == checkOutId)
+
+
+    const navigate = useNavigate()
+
+    const goTo = () => {
+        navigate(`/`)
+    }
 
     return (
         <div className="check-out">
@@ -23,9 +30,7 @@ const CheckOut = ({ data }) => {
                 <input type="text" className="check-out__form-input" placeholder="Endereço residencial"/>
                 <label htmlFor="" className="check-out__form-label">Forma de Pagamento:</label>
                 <input type="text" className="check-out__form-input" placeholder="Escolha forma de pagamento"/>
-                <button type='submit'>
-                    <Link to={"/"}>Confirmar Pedido</Link>
-                </button>
+                <button onClick={goTo} type='submit'>Confirmar Pedido</button>
             </form>
             <Footer />  
         </div>

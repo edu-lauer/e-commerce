@@ -1,6 +1,6 @@
 import "./productDetail.scss"
 import React from 'react'
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useParams } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
@@ -10,7 +10,10 @@ const ProductDetail = ({ data }) => {
     const { productId } = useParams()
     const selectedProduct = data.find((product) => product.id == productId)
 
-    console.log(selectedProduct.imgPath);
+    const navigate = useNavigate()
+    const goTo = () => {
+        navigate(`/shoppingcart/${selectedProduct.id}`)
+    }
 
     return (
         <div className="product-detail">
@@ -49,9 +52,9 @@ const ProductDetail = ({ data }) => {
                             ></div>
                         ))}
                     </div>
-                    <button>
+                    <button onClick={goTo}>
                         <img src={carrinhoCompras}></img>
-                        <Link to={`/shoppingcart/${selectedProduct.id}`}>Adicionar ao carrinho</Link>
+                        Adicionar ao carrinho
                     </button>
                 </div>
             </div>
