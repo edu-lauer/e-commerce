@@ -12,6 +12,10 @@
         align-items: center;
     }
 
+    &__superior:hover {
+        cursor: pointer;
+    }
+
     &__superior-logo {
         width: 9%;
         height: auto;
@@ -195,6 +199,4 @@
             }
         }
     }
-
-
 }

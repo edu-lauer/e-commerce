@@ -54,7 +54,7 @@ const ShoppingCart = ({ data }) => {
             <div className="product-detail">
                 <div className="product-detail__container">
                     <div className="product-detail__container-left-side">
-                        <img src={selectedProduct.imgPathDetail} alt={selectedProduct.title} />
+                        <img src={selectedProduct.imgPath} alt={selectedProduct.title} />
                     </div>
                     <div className="product-detail__container-right-side">
                         <h1 style={customStyles.meuCarrinho}>Meu Carrinho</h1>

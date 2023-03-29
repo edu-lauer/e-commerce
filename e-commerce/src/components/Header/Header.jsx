@@ -3,12 +3,20 @@ import React from 'react'
 import logoDnc from '../../assets/dnc-logo.svg'
 import searchLogo from '../../assets/search.png'
 import shoppCart from '../../assets/shopping-cart.svg'
+import { useNavigate } from "react-router-dom"
 
 const Header = () => {
+
+    const navigate = useNavigate()
+
+    const imgGoHome = () => {
+        navigate('/home')
+    }
+
     return (
         <section className="header">
             <div className="header__superior">
-                <img src={logoDnc} alt="logo da escola dnc" className="header__superior-logo" />
+                <img onClick={imgGoHome} src={logoDnc} alt="logo da escola dnc" className="header__superior-logo" />
                 <div className="header__input-container">
                     <img src={searchLogo} alt="lupa de busca" className='header__search-logo' />
                     <input type="text" placeholder='Search' />
