@@ -10,12 +10,14 @@ const ProductDetail = ({ data }) => {
     const { productId } = useParams()
     const selectedProduct = data.find((product) => product.id == productId)
 
+    console.log(selectedProduct.imgPath);
+
     return (
         <div className="product-detail">
             <Header />
             <div className="product-detail__container">
                 <div className="product-detail__container-left-side">
-                    <img src={selectedProduct.imgPathDetail} alt={selectedProduct.title} />
+                    <img src={selectedProduct.imgPath} alt={selectedProduct.title} />
                     <p className="product-detail__container-left-side-title">{selectedProduct.title}</p>
                     <h2>Descrição:</h2>
                     <p className="product-detail__container-left-side-decription">{selectedProduct.description}</p>
@@ -38,8 +40,8 @@ const ProductDetail = ({ data }) => {
                             )}
                     </p>
                     <div className="product-detail__cube-colors">
-                        {selectedProduct.colors.map((color) => (
-                            <div
+                        {selectedProduct.colors.map((color, index) => (
+                            <div key={index}
                                 style={{
                                     borderRadius: "10px",
                                     backgroundColor: color,
