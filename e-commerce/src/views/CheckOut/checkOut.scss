@@ -60,3 +60,41 @@
     }
 
 }
+
+
+
+@media screen and (max-width: 430px) {
+    .check-out {
+        h1 {
+            margin: 3rem auto;
+            font-size: 1.5rem;
+        }
+
+        &__form-label {
+            font-size: 15px;
+            line-height: 18px;
+
+            width: 18rem;
+            height: 1.5rem;
+        }
+
+        &__form-input {
+            width: 300px;
+            height: 40px;
+
+            font-size: 10px;
+        }
+
+        button {
+            width: 18rem;
+            height: 2rem;
+            font-size: 0.8rem;
+        }
+
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+
+    }
+}
