@@ -146,24 +146,17 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 430px) {
     .header {
         padding: 0.5rem;
 
-        &__search-logo {
-            width: 3%;
-            height: auto;
-            margin-top: 2px
-        }
+        &__navbar {
+            padding-top: 1rem;
 
-        &__superior-logo {
-            width: 6%;
-            height: auto;
-        }
-
-        &__carrinho-logo {
-            width: 7%;
-            height: auto;
+            a {
+                font-size: 7px;
+                line-height: 10px;
+            }
         }
 
         &__input-container {
@@ -172,30 +165,6 @@
                 height: 1rem;
                 font-size: 7px;
                 padding-left: 1.5rem;
-            }
-        }
-
-        &__navbar {
-            padding-top: 1rem;
-
-            a {
-                font-size: 7px;
-                line-height: 10px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .header {
-        padding: 0.5rem;
-
-        &__navbar {
-            padding-top: 1rem;
-
-            a {
-                font-size: 7px;
-                line-height: 10px;
             }
         }
     }
