@@ -201,63 +201,6 @@
 
 }
 
-
-@media screen and (max-width: 600px) {
-    .product-detail {
-        &__container-left-side {
-            h2 {
-                width: 75%;
-                text-align: left;
-                font-size: 1rem;
-                padding-left: 0;
-            }
-        }
-
-        &__cube-colors {
-
-            div {
-                width: 47px;
-                height: 42px;
-                margin-bottom: 6rem;
-                margin-top: 0.5rem;
-            }
-        }
-
-        // css do container do lado direito
-        &__container-right-side {
-            p {
-                font-size: 0.8rem;
-            }
-
-            span {
-                font-size: 0.8rem;
-            }
-            button {
-                margin: auto 6rem auto 2rem;
-                width: 15rem;
-                height: 2rem;
-
-                font-size: 12px;
-            }
-        }
-
-        &__container-right-side-price {
-            font-size: 1rem;
-        }
-
-        &__container-right-side-title {
-            width: 85%;
-            font-size: 1rem;
-        }
-
-        &__container-left-side-decription {
-            width: 75%;
-            font-size: 0.7rem;
-            text-align: left;
-        }
-    }
-}
-
 @media screen and (max-width: 500px) {
     .product-detail {
 
