@@ -12,7 +12,7 @@ A DNC propos o desenvolvimento de uma aplicação web utilizando o React como fr
 * [3. Guia de instalação](#3-guia-de-instalação)
 * [4. Tecnologias utilizadas](#4-tecnologias-utilizadas)
 * [5. Implementações Futuras](#5-implementações-futuras)
-* [6. Autora do projeto](#6-autora-do-projeto)
+* [6. Autor do projeto](#6-autora-do-projeto)
 
 ## 1. Sobre o projeto
 
@@ -44,7 +44,7 @@ O site também é responsivo.
 
  <div align='center'>
 
- ![img](./src/assets/elo7.gif[E-Commerce.gif](https://github.com/edu-lauer/e-commerce/blob/main/e-commerce/src/assets/E-Commerce.gif))
+ ![img](./src/assets/E-Commerce.gif)
 
 </div>
 
