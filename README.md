@@ -64,7 +64,7 @@ Feito isso, ainda no terminal, entre na pasta clonada e digite o seguinte comand
 
 Agora vamos rodar a aplicação! Digite no terminal:
         
-      npm start
+      npm run dev
       
 
 Prontinho! Você já pode usar o projeto.       
