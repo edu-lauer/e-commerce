@@ -44,7 +44,7 @@ O site também é responsivo.
 
  <div align='center'>
 
- ![img](./src/assets/E-Commerce.gif)
+ ![img](./e-commerce/src/assets/E-Commerce.gif)
 
 </div>
 
