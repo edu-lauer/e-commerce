@@ -96,7 +96,7 @@ Em futuras implementações, para a melhoria e desempenho do projeto, desejo rea
   - Optimização e melhoria na responsividade.
   - Melhoria na questão de validações e tratamentos de erros.
 
-## 6. Autora do projeto
+## 6. Autor do projeto
 
 👩‍💻 Projeto desenvolvido por:
 
@@ -124,7 +124,7 @@ Em futuras implementações, para a melhoria e desempenho do projeto, desejo rea
           </a>
         </td>
        </tr>
-    </tbody>s
+    </tbody>
   </table>
 </div>
 
